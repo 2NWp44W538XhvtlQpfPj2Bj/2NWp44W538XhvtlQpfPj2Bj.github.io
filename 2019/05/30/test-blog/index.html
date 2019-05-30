@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content>
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Mac 下 Hexo 和 GitHub-Pages 搭建个人博客">
+  <meta property="og:description" content>
+  <meta property="og:site_name" content="Hexo">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="http://yoursite.com">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Hexo</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Mac 下 Hexo 和 GitHub-Pages 搭建个人博客</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/<your-github-username>">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:<your-email-address>">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2019-05-30</span>
+            <span class="time">14:22:36</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>本文以图文的方式介绍了在 Mac 下使用 Hexo + GitHub Pages 搭建个人博客<br>准备条件<br>硬件环境：</p>
+<pre><code>Mac 笔记本
+</code></pre><p>软件环境：</p>
+<pre><code>GitHub 账号
+Git
+Node.js
+npm
+hexo
+</code></pre><p>本地站点搭建<br>安装Git</p>
+<p>在 Mac OS X 中自带 Git，不需要安装 Git，在 Mac terminal 中输入以下命令可以查看 git 版本号：</p>
+<p>git –version</p>
+<p>如下图所示：</p>
+<p><img src="/images/git_version.png" alt></p>
+<p>安装Node.js</p>
+<p>Node.js 可以直接从 官网 下载，然后下一步下一步即可完成安装，如下图所示：</p>
+<p>从上图中可以看出，node.js 安装完成以后，npm 也被安装完成，简化了工作。检测安装是否成功，可以在 Mac terminal 中输入以下命令查看 node.js 和 npm 的版本号：</p>
+<p>node -v<br>npm -v</p>
+<p>如下图所示：</p>
+<p>安装Hexo</p>
+<p>Git、Node.js 和 npm 安装完成以后，接下来就可以安装 Hexo 了。在 Mac terminal 中输入以下命令即可执行安装：</p>
+<p>sudo npm install -g hexo</p>
+<p>稍等片刻，安装完成以后，效果如下图所示：</p>
+<p>输入以下命令查看 Hexo 的版本号：</p>
+<p>hexo -v</p>
+<p>如下图所示：</p>
+<p>初始化 Hexo</p>
+<p>在自己的用户名目录下，创建 hexo 文件夹(mkdir hexo)，并进入到 hexo 文件夹中(cd hexo)，执行以下命令可以完成对 Hexo 的初始化工作</p>
+<p>hexo init</p>
+<p>如下图所示：</p>
+<p>安装依赖</p>
+<p>在部署博客之前，需要先安装依赖，执行以下命令即可：</p>
+<p>npm install</p>
+<p>生成静态页面</p>
+<p>执行以下命令，生成静态页面，如下图所示：</p>
+<p>hexo generate</p>
+<p>启动服务</p>
+<p>执行以下命令，启动服务，如下图所示：</p>
+<p>hexo server</p>
+<p>PS：停止服务使用 Ctrl+C。<br>在本地查看效果</p>
+<p>打开浏览器，输入 <a href="http://localhost:4000/，如下图所示：" target="_blank" rel="noopener">http://localhost:4000/，如下图所示：</a></p>
+<p>部署到 GitHub</p>
+<p>以上操作的结果是可以生成一个在本地浏览的博客站点，若想部署到 GitHub 上，请按照如下方式操作即可。因为本博客是托管在 GitHub 上的，所以一个 GitHub 账号是必不可少的，在 GitHub 注册账号这里就不叙述了。<br>创建 repository</p>
+<p>登录 GitHub 个人账号以后，在首页右上角会有 New repository 按钮，点击按钮会出现下图所示界面：</p>
+<p>如上图所示，其中有三点需要说明：</p>
+<pre><code>Repository name 的格式必须是：yourGitHubId.github.io，例如我的是：lijiankun24.github.io；
+Description 可以为空；
+免费服务的话，只能选择 Public (公开的)
+</code></pre><p>安装 Git 部署器</p>
+<p>在 Mac terminal 中执行以下命令即可：</p>
+<p>npm install hexo-deployer-git –save</p>
+<p>修改配置文件</p>
+<p>在 hexo 的根目录下会有 _config.yml 文件，打开 _config.yml 文件，在文件最末尾，修改如下配置：</p>
+<p>部署</p>
+<p>在 hexo 目录下执行以下命令， 即可完成对将静态博客部署到 GitHub 上</p>
+<p>hexo deploy</p>
+<p>部署成功以后，在浏览器中输入 <a href="http://lijiankun24.github.io" target="_blank" rel="noopener">http://lijiankun24.github.io</a> 即可在线浏览自己的博客啦~<br>创建新博客</p>
+<p>PS：以下命令均是在 hexo 路径下执行的。</p>
+<p>新建博客，执行以下命令：</p>
+<p>hexo new “test_blog”</p>
+<p>在 /hexo/source/_posts/ 目录下即可看到一个名为 test-blog.md 文件。<br>发布新博客</p>
+<p>编辑好博客以后，即可执行以下命令部署到GitHub上：</p>
+<p>hexo clean<br>hexo generate<br>hexo deploy</p>
+<p>PS：一些快捷键：</p>
+<p>hexo g == hexo generate<br>hexo d == hexo deploy<br>hexo s == hexo server<br>hexo n == hexo new</p>
+<p>本文到此结束，其实在网上类似的教程很多，我只不过是参考别人照猫画虎，这篇博客真正的意义在于熟悉 Hexo 的使用，为以后继续写博客奠定一定的基础。<br>当然，《Mac 下 Hexo 和 GitHub-Pages 搭建个人博客》系列文章还没有写完，后面会继续更新。</p>
+<p>参考博客：</p>
+<p>Mac下Hexo+GitHub搭建博客图文教程（一） – yuweiguo</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        </p><p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+

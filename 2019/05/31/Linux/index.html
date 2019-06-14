@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content>
+  <meta name="author" content="John Doe">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Linux 常用命令">
+  <meta property="og:description" content>
+  <meta property="og:site_name" content="Hexo">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="http://yoursite.com">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Hexo</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/default-banner-dark.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Linux 常用命令</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://github.com/<your-github-username>">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:<your-email-address>">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By John Doe</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2019-05-31</span>
+            <span class="time">23:21:26</span>
+          </span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/ubuntu/">#ubuntu</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>一.tar.xz文件如何解压<br>1.XZ压缩最新压缩率之王</p>
+<p>  xz这个压缩可能很多都很陌生，不过您可知道xz是绝大数Linux默认就带的一个压缩工具。</p>
+<p>  之前xz使用一直很少，所以几乎没有什么提起。</p>
+<p>  我是在下载phpmyadmin的时候看到这种压缩格式的，phpmyadmin压缩包xz格式的居然比7z还要小，这引起我的兴趣。</p>
+<p>  最新一段时间会经常听到xz被采用的声音，像是最新的archlinux某些东西就使用xz压缩。不过xz也有一个坏处就是压缩时间比较长，比7z压缩时间还长一些。不过压缩是一次性的，所以可以忽略。</p>
+<p>2.xz压缩文件方法或命令</p>
+<p>  xz -z 要压缩的文件</p>
+<p>  如果要保留被压缩的文件加上参数 -k ，如果要设置压缩率加入参数 -0 到 -9调节压缩率。如果不设置，默认压缩等级是6.<br>  xz解压文件方法或命令</p>
+<p>  xz -d 要解压的文件</p>
+<p>  同样使用 -k 参数来保留被解压缩的文件。<br>  创建或解压tar.xz文件的方法</p>
+<p>3.习惯了 tar czvf 或 tar xzvf 的人可能碰到 tar.xz也会想用单一命令搞定解压或压缩。其实不行 tar里面没有征对xz格 式的参数比如 z是针对 gzip，j是针对 bzip2。</p>
+<p>  创建tar.xz文件：只要先 tar cvf xxx.tar xxx/ 这样创建xxx.tar文件先，然后使用 xz -z xxx.tar 来将 xxx.tar压缩成为 xxx.tar.xz</p>
+<p>  解压tar.xz文件：先 xz -d xxx.tar.xz 将 xxx.tar.xz解压成 xxx.tar 然后，再用 tar xvf xxx.tar来解包。</p>
+<p>二.什么是“AppImage”？我该如何安装？<br>1.Linux软件包作为32位和64位发行版的.appimage发布，应该可以在所有主要的Linux发行版中运行而不会出现任何问题。该团队目前没有计划提供本机.deb（或.rpm）安装程序。</p>
+<p>2.什么是AppImages？它们与快照有何不同？<br>可以在没有安装或需要的情况下下载和运行AppImages对于root权利。</p>
+<p>3.使其可执行</p>
+<p>您可以按如下方式使appImage可执行：</p>
+<p>chmod a+x exampleName.AppImage</p>
+<p>执行</p>
+<p>您可以按如下方式执行appImage：</p>
+<p>./exampleName.AppImage</p>
+<p>4.关于appImage<br>AppImage格式的关键思想是一个app =一个文件。一切   AppImage包含一个应用程序以及应用程序运行所需的所有文件。在   换句话说，每个AppImage都没有依赖项   包含在目标基本操作系统中。</p>
+<p>AppImage（以及前辈klik和portablelinuxapps）没有   安装传统意义上的软件（即它不放文件   在系统中的所有地方）。</p>
+<p>每个应用程序使用一个文件。   每个都是自包含的：它包括应用程序的所有库   取决于并且不是基本系统的一部分。在这方面，   它类似于”应用程序虚拟化”。可以使用AppImage   文件，即使他们不是超级用户，或者他们正在使用Live CD。   AppImage文件通常比编译和安装文件更简单   应用程序，因为没有实际安装。 AppImage文件   是一个临时安装的压缩图像，允许访问   该程序，但不必提取程序或修改   基础系统。</p>
+<p>AppImageKit-project 的 README.md 提供了很多其他信息，例如用例， 问题空间和目标。<br>用例</p>
+<p>   作为用户，我想访问上游下载页面，从原作者下载应用程序，然后在我的Linux桌面系统上运行它，就像我在Windows或Mac应用程序中一样。</p>
+<p>   作为测试人员，我希望能够从连续构建服务器获取最新的应用程序的最新版本，并在我的系统上进行测试，无需编译，也不必担心我可能会弄乱了我的系统。</p>
+<p>   作为一名应用程序作者或ISV，我想为Linux桌面系统提供软件包，就像我为Windows和OS X一样，而不需要将其”分配”到一个发行版中，而无需为gazillions构建不同的发行版。</p>
+<p>目标</p>
+<p>   简单。</p>
+<pre><code>AppImage旨在成为一种易于使用的非常简单的格式   理解，创造和管理。
+</code></pre><p>   保持二进制兼容性。</p>
+<pre><code>AppImage是二进制软件分发的格式。软件   打包为AppImage旨在与二进制兼容   可以使用尽可能多的系统。需要   （重新）软件的编译应该大大减少。
+</code></pre><p>   是分布式的。</p>
+<pre><code>AppImage应该在所有基本操作系统（发行版）上运行   它是为（和更高版本）创建的。例如，你可以   目标Ubuntu 9.10，openSUSE 11.2和Fedora 13（及更高版本）   同时，无需创建和维护单独的   每个目标系统的包。
+</code></pre><p>   无需安装。</p>
+<pre><code>AppImages以允许其直接运行的格式包含应用程序   来自存档，无需先安装。这是   与Live CD相媲美。在Live CD之前，操作系统必须是   在可以使用之前先安装。
+</code></pre><p>   始终保持应用程序的压缩状态。</p>
+<pre><code>由于应用程序始终保持打包状态，因此永远不会   在硬盘上解压缩。电脑解压缩了   访问时即时应用程序。因为减压是   比大多数系统上的硬盘读取速度快，这有一个速度   除了节省空间之外的优势。此外，所需的时间   安装完全删除。
+</code></pre><p>   允许将应用放在任何地方。</p>
+<pre><code>AppImages是&quot;可重定位的&quot;，因此允许用户存储和   从任何位置执行它们（包括CD-ROM，DVD，可移动   磁盘，USB记忆棒。
+</code></pre><p>   将应用程序设为只读。</p>
+<pre><code>由于AppImages是设计的只读，因此用户可以合理   确保应用程序在操作期间不会自行修改。
+</code></pre><p>   不需要重新编译。</p>
+<pre><code>必须可以从已有的二进制文件创建AppImages，   无需重新编译。这大大加快了   AppImage创建过程，因为不需要编译器。这个   还允许第三方将封闭源应用程序打包为   AppImages。 （尽管如此，它对上游来说可能是有益的   应用程序开发人员专门为源代码构建   生成AppImage的目的。）
+</code></pre><p>   保持基本操作系统不受影响。</p>
+<pre><code>由于AppImages旨在在没有的系统上运行   由管理员专门准备，AppImages可能不需要   任何不寻常的基本操作系统准备。因此，他们   不能依赖特殊的内核补丁，内核模块或任何   没有附带目标分发的应用程序   默认值。
+</code></pre><p>   不要求root。</p>
+<pre><code>由于AppImages旨在由最终用户运行，因此不应该   reqiure要安装或使用的管理帐户（root）。他们   但是，可以由管理员安装（例如，在多用户中）   场景）如果需要的话。
+</code></pre><p>给出答案 dufte 19.05.2016 - 08:07<br>源<br>20</p>
+<p>两个系统的基本概念可能看起来相似，但是快照和Appimages之间存在一些设计差异。</p>
+<p>我想到的一些”大”的是：</p>
+<p>   安全性，禁闭。 Snap软件包在沙箱中运行，不允许它们从沙箱中逃脱并到达系统中应该不触摸的其他部分。这是一个更强大的安全层，与权限系统并行运行。显然，在开始时（以及稍后）处理它时有点令人沮丧，但如果你在系统管理方面考虑它，那么这就是管理员想要用户的事情。</p>
+<p>   安全。安装从网络上取下的软件，就像在街上舔竿一样安全。有时没有任何事情发生，有时你会遇到一些非常大的健康问Snap软件包有适当的存储库，由Canonical控制，就像通常的标准Ubuntu存储库一样。您可以继续并从周围安装 .deb 文件，但这将是您的选择，而不是设计问题。</p>
+<p>   安装。 AppImages意味着相当于”便携式Windows可执行文件”。所有库都是自包含的，任何用户都可以下载并执行其中一个。另一方面， snap 包是正确的包，需要通过apposite包管理器安装（ root 或 sudo ）（ snap install tic-tac-toe 会抛出错误：它需要 sudo ！ ）</p>
+<p>   去除。要删除快照包，您需要使用具有正确权限的包管理器 snap remove … 来执行此操作。另一方面，Appimages只是”存在”。那么任何用户都不想要那个Appimage？他/她只是删除了文件，它就消失了。</p>
+<p>   虽然我强烈建议在使用Appimages时要谨慎，但我个人自己也会使用其中一些。</p>
+<p>   我发现它们对我的工作系统特别有用，我没有 root 访问权限（只有管理员有）但我需要最新版本的特定软件，幸运的是，开发人员以Appimage形式提供。</p>
+<p>   我有点担心其中确实包含了一些恶意代码，因此我尽可能多地检查了发布者的身份。我并不是100％确定这个软件是良性的，但我已尽我所能。</p>
+<p>给出答案 dadexix86 19.05.2016 - 09:59<br>源<br>15</p>
+<p>虽然snap专注于Ubuntu，但AppImage是交叉发行版，也可以在Fedora，debian，openSUSE，CentOS等上运行。</p>
+<p>AppImage不需要Linux发行版提供的运行时或基础结构支持，因此可以在任何地方运行。它使应用程序作者能够将他们的软件直接发送给Linux用户，例如do for Windows和OS X;没有Canonical或其他任何”介于”软件作者和最终用户之间。</p>
+<p>如果应用程序以AppImage格式提供，则用户可以访问原作者的网站进行下载，例如链接。使AppImage可执行（使用文件管理器或 chmod a+x ./yourAppImage ），然后只需双击即可运行应用程序。</p>
+<p>给出答案 probono 19.05.2016 - 08:24<br>源<br>11</p>
+<p>在运行AppImage之前，您需要使其可执行。这是Linux安全功能。有两种主要方法可以生成AppImage可执行文件：</p>
+<p>1。使用GUI</p>
+<p>或</p>
+<p>2。在命令行</p>
+<p>chmod a+x Some.Appimage</p>
+<p>现在双击您的文件以运行它或右键单击＆gt;运行</p>
+<p>给出答案 probono 10.10.2016 - 04:01<br>源<br>3</p>
+<p>AppImages需要FUSE才能运行。用户空间（FUSE）中的文件系统是一个允许非root用户挂载文件系统的系统。<br>安装FUSE</p>
+<p>许多发行版都有开箱即用的FUSE设置。但是，如果它不适合您，您可能需要手动安装和配置FUSE。</p>
+<p>例如，在Ubuntu上：</p>
+<p>sudo apt-get install fuse<br>sudo modprobe fuse<br>sudo usermod -a -G fuse $USER</p>
+<p>例如，在openSUSE上：</p>
+<p>sudo zypper install fuse</p>
+<p>后备</p>
+<p>如果您不想安装FUSE，可以安装或解压缩AppImage。</p>
+<p>要安装AppImage并运行应用程序，只需运行<br>即可</p>
+<p>sudo mount -o loop Some.AppImage /mnt<br>/mnt/AppRun</p>
+<p>如果这不起作用，您可能会有一个实验性的输入2 AppImage 。这些要求您将 -o offset=… 传递给 mount 命令。使用 –appimage-offset 运行AppImage以找出偏移量的正确数字。</p>
+<p>三.Linux命令行下如何终止当前程序?</p>
+<p>1.<br>快捷键：</p>
+<p>Ctrl+c<br>    在命令行下起着终止当前执行程序的作用，<br>Ctrl+d<br>    相当于exit命令，退出当前shell<br>Ctrl+s<br>    挂起当前shell（保护作用很明显哦）<br>Ctrl+q<br>    解冻挂起的shell再不行就重新连接打开一个终端，reboot linux 或 kill 相关进程。</p>
+<p><a href="https://blog.csdn.net/gongpeng1966/article/details/68958322" target="_blank" rel="noopener">https://blog.csdn.net/gongpeng1966/article/details/68958322</a></p>
+<p>2.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        </p><p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
